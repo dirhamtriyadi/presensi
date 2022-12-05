@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::get('/pengguna/list-data', [App\Http\Controllers\PenggunaController::class, 'lihatData']);
 Route::get('/pengguna/ambil-data/{nip}', [App\Http\Controllers\PenggunaController::class, 'ambilData']);
 Route::post('/pengguna/simpan-data', [App\Http\Controllers\PenggunaController::class, 'simpanData']);
-Route::get('/pengguna/hapus-data/{nip}', [App\Http\Controllers\PenggunaController::class, 'hapusData']);
+Route::delete('/pengguna/hapus-data/{nip}', [App\Http\Controllers\PenggunaController::class, 'hapusData']);
 
 Route::get('/petakehadiran', [App\Http\Controllers\PetaKehadiranController::class, 'lihatData']);
 Route::post('/petakehadiran', [App\Http\Controllers\PetaKehadiranController::class, 'simpanData']);
