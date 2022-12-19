@@ -13,6 +13,11 @@
 
 <body>
     <div class="container">
+        <div class="alert alert-success text-center" role="alert">
+            <h1>
+                Data Pengguna
+            </h1>
+        </div>
         <a href="{{ route('pengguna.create') }}" class="btn btn-primary mb-4">Tambah Pengguna</a>
         <table class="table table-hover table-striped table-bordered">
             <thead class="table-dark">
@@ -78,7 +83,8 @@
                         )
                         $.ajax({
                             type: "DELETE",
-                            url: "{{ route('pengguna') }}/"+$(this).data('nip')+"/hapus",
+                            url: "{{ route('pengguna') }}/" + $(this).data('nip') +
+                                "/hapus",
                             success: function(response) {
                                 location.reload();
                             }
