@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/pengguna', [App\Http\Controllers\PenggunaController::class, 'index'])->name('pengguna');
 Route::get('/pengguna/list-data', [App\Http\Controllers\PenggunaController::class, 'lihatData']);
 Route::get('/pengguna/ambil-data/{nip}', [App\Http\Controllers\PenggunaController::class, 'ambilData']);
 Route::post('/pengguna/simpan-data', [App\Http\Controllers\PenggunaController::class, 'simpanData']);
