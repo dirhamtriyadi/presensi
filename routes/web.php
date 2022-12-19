@@ -18,6 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/pengguna', [App\Http\Controllers\PenggunaController::class, 'index'])->name('pengguna');
+Route::get('/pengguna/tambah', [App\Http\Controllers\PenggunaController::class, 'create'])->name('pengguna.create');
+Route::post('/pengguna/store', [App\Http\Controllers\PenggunaController::class, 'store'])->name('pengguna.store');
+Route::get('/pengguna/{nip}/edit', [App\Http\Controllers\PenggunaController::class, 'edit'])->name('pengguna.edit');
+Route::get('/pengguna/{nip}/hapus', [App\Http\Controllers\PenggunaController::class, 'destroy'])->name('pengguna.destroy');
+
 Route::get('/pengguna/list-data', [App\Http\Controllers\PenggunaController::class, 'lihatData']);
 Route::get('/pengguna/ambil-data/{nip}', [App\Http\Controllers\PenggunaController::class, 'ambilData']);
 Route::post('/pengguna/simpan-data', [App\Http\Controllers\PenggunaController::class, 'simpanData']);

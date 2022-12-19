@@ -13,6 +13,37 @@ class PenggunaController extends Controller
         return view('pengguna', ['pengguna'=>$pengguna]);
     }
 
+    public function create()
+    {
+
+        return view('tambahpengguna');
+    }
+
+    public function store(Request $request)
+    {
+        Pengguna::updateOrCreate([
+            'nip' => $request->nip
+        ], [
+            'nama' => $request->nama,
+            'level' => $request->level,
+            'sandi' => bcrypt($request->sandi)
+        ]);
+
+        return redirect()->route('pengguna');
+    }
+
+    public function edit($nip)
+    {
+        $pengguna = Pengguna::find($nip);
+        return view('editpengguna', ['pengguna'=>$pengguna]);
+    }
+
+    public function destroy($nip)
+    {
+        Pengguna::destroy($nip);
+        return redirect('/pengguna');
+    }
+
     public function lihatdata()
     {
         $r = Pengguna::all();

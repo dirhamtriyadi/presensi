@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="container">
+        <a href="{{ route('pengguna.create') }}" class="btn btn-primary mb-4">Tambah Pengguna</a>
         <table class="table table-hover table-striped table-bordered">
             <thead class="table-dark">
                 <tr>
@@ -28,7 +29,10 @@
                         <td>{{ $i->nama }}</td>
                         <td>{{ $i->level }}</td>
                         <td>{{ $i->sandi }}</td>
-                        <td></td>
+                        <td>
+                            <a href="{{ route('pengguna') }}/{{ $i->nip }}/edit" class="btn btn-warning">Edit</a>
+                            <a href="{{ route('pengguna') }}/{{ $i->nip }}/hapus" class="btn btn-danger">Hapus</a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

@@ -14,4 +14,11 @@ class Pengguna extends Model
     const UPDATED_AT = null;
 
     protected $primaryKey = 'nip';
+
+    protected $fillable = [
+        'nip',
+        'nama',
+        'level',
+        'sandi'
+    ];
 }
