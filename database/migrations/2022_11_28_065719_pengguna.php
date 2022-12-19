@@ -18,7 +18,7 @@ return new class extends Migration
             $table->char('nip', 9);
             $table->string('nama', 100);
             $table->char('level', 1);
-            $table->string('sandi', 32);
+            $table->string('sandi');
             $table->primary('nip');
         });
     }
