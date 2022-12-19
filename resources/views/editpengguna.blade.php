@@ -15,10 +15,7 @@
         <a href="{{ route('pengguna') }}" class="btn btn-primary mb-4">Kembali</a>
         <form action="{{ route('pengguna.store') }}" method="POST">
             @csrf
-            <div class="mb-3">
-                <label for="nip" class="form-label">NIP</label>
-                <input type="text" class="form-control" id="nip" name="nip" value="{{ $pengguna->nip }}">
-            </div>
+            <input type="text" class="form-control" id="nip" name="nip" value="{{ $pengguna->nip }}" hidden>
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama</label>
                 <input type="text" class="form-control" id="nama" name="nama" value="{{ $pengguna->nama }}">
