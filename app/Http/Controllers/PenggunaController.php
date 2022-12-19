@@ -12,6 +12,7 @@ class PenggunaController extends Controller
         $pengguna = Pengguna::all();
         return view('pengguna', ['pengguna'=>$pengguna]);
     }
+
     public function lihatdata()
     {
         $r = Pengguna::all();

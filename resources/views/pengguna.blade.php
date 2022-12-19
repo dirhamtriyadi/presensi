@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <table class="table table-hover table-striped table-bordered">
-            <thead class="table-primary">
+            <thead class="table-dark">
                 <tr>
                     <th>No</th>
                     <th>Nip</th>
