@@ -41,7 +41,6 @@ class PenggunaController extends Controller
     public function destroy($nip)
     {
         Pengguna::destroy($nip);
-        return redirect('/pengguna');
     }
 
     public function lihatdata()
