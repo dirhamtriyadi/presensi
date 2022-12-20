@@ -81,17 +81,15 @@
                             'Your file has been deleted.',
                             'success'
                         ).then((result) => {
-                            if (result.isConfirmed) {
-                                $.ajax({
-                                    type: "DELETE",
-                                    url: "{{ route('pengguna') }}/" + $(this).data(
-                                            'nip') +
-                                        "/hapus",
-                                    success: function(response) {
-                                        location.reload();
-                                    }
-                                });
-                            }
+                            $.ajax({
+                                type: "DELETE",
+                                url: "{{ route('pengguna') }}/" + $(this).data(
+                                        'nip') +
+                                    "/hapus",
+                                success: function(response) {
+                                    location.reload();
+                                }
+                            });
                         })
                     }
                 })
